@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    android:padding="10dp"
+    tools:context=".ClickPostActivity">
+
+    <ImageView
+        android:id="@+id/click_post_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/select_image" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/click_post_image">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/click_post_image">
+
+            <TextView
+                android:id="@+id/click_post_title"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/inputs"
+                android:textSize="16sp"
+                android:hint="Title"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/click_post_type"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/click_post_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/inputs"
+                android:textSize="16sp"
+                android:hint="Type (Book, Film, TV etc.)"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:id="@+id/post_review_rating_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/click_post_type"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating:"
+                    android:textSize="16sp" />
+
+
+                <Spinner
+                    android:id="@+id/click_post_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/numbers_array"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/click_post_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_review_rating_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/inputs"
+                android:padding="15dp"
+                android:text="Post description..."
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/click_edit_post_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/click_post_description"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:text="Edit Post"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/click_delete_post_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/click_edit_post_button"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button"
+                android:text="Delete Post"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

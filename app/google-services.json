@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1069783744923",
+    "firebase_url": "https://storylend.firebaseio.com",
+    "project_id": "storylend",
+    "storage_bucket": "storylend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069783744923:android:4de80b12ec1b0d4e",
+        "android_client_info": {
+          "package_name": "com.example.project_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069783744923-bggvmjooahu0q4rgv2j70bk9clb8s2lm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project_app",
+            "certificate_hash": "b7c89ce811c4cb117010e5288fff40a326d6fb96"
+          }
+        },
+        {
+          "client_id": "1069783744923-cdvm2n6ni3r3le2cr4n8uphf0g94n6as.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1HPS9PuZOnpC9SmbB6hTOEc2lO9XhUVM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069783744923-cdvm2n6ni3r3le2cr4n8uphf0g94n6as.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

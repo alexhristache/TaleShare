@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/post_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    tools:context=".PostActivity">
+
+    <include
+        android:id="@+id/update_post_page_toolbar"
+        layout="@layout/app_bar_layout"/>
+
+    <ImageButton
+        android:id="@+id/select_post_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:layout_below="@id/update_post_page_toolbar"
+        app:srcCompat="@drawable/select_image" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/select_post_image">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/post_review_title"
+                android:layout_width="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/inputs"
+                android:hint="Title"/>
+
+            <EditText
+                android:id="@+id/post_review_type"
+                android:layout_width="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_review_title"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/inputs"
+                android:hint="Type (Book, Film, TV etc.)"/>
+
+            <LinearLayout
+                android:id="@+id/post_review_rating_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_review_type"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rating:"
+                    android:textSize="16sp"/>
+
+                <Spinner
+                    android:id="@+id/post_review_rating"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/numbers_array"
+                    android:layout_weight="1">
+                </Spinner>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/post_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_below="@id/post_review_rating_layout"
+                android:padding="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:hint="Please write your recommendation here..."
+                android:background="@drawable/inputs"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/update_post_button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Post Review"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:padding="15dp"
+                android:textAllCaps="false"
+                android:layout_below="@id/post_description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+    
+    <ProgressBar
+        android:id="@+id/post_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:visibility="invisible"/>
+</RelativeLayout>
